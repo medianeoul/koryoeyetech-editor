@@ -74,7 +74,7 @@ ClassicEditor.builtinPlugins = [
 	Font,
 	SimpleUploadAdapter,
 	HtmlEmbed,
-	MyCustomUploadAdapterPlugin,
+	// MyCustomUploadAdapterPlugin,
 ];
 
 // Editor configuration.
@@ -160,6 +160,9 @@ function MyCustomUploadAdapterPlugin( editor ) {
 		if( editor.onLoaded ) {
 			editor.onLoaded();
 		}
+
+		if( window.loadView )
+			window.loadView();
 	};
 }
 
